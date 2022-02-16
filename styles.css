@@ -33,6 +33,7 @@ h2 {
     background-color: #FFF89A;
     text-align: center;
     margin-bottom: 1.2rem;
+    text-transform: uppercase;
 }
 
 span {
@@ -49,6 +50,25 @@ label {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .2rem;
+    position: relative;
+}
+
+label::after {
+    content: '*';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    right: 150px;
+    top: 0;
+    color: #FF1700;
+}
+
+label:nth-child(3)::after {
+    right: 180px;
+}
+
+label:last-of-type::after {
+    right: 105px;
 }
 
 input {
@@ -60,7 +80,17 @@ input {
     font-size: 1.2rem;
     letter-spacing: .2rem;
     transform: all .3s;
+    /* position: relative; */
 }
+
+
+/* input::after {
+    content: "";
+    color: #FF1700;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+} */
 
 input:focus,
 input:hover {
@@ -69,22 +99,104 @@ input:hover {
     border: 2px solid #F3950D;
 }
 
-
 button {
-    width: 50%;
     border: none;
-    margin: 2rem auto;
-    padding: 1.5rem 2rem;
-    font-size: 1.2rem;
-    border-radius: 3rem;
-    letter-spacing: .2rem;
-    /* border-radius: 1px solid #FFCC1D; */
-    background: #F3950D;
     cursor: pointer;
     transform: all .2s;
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+
 }
 
-button:hover {
+.login {
+    width: 50%;
+    margin: 2rem auto;
+    padding: 1.5rem 2rem;
+    border-radius: 3rem;
+    /* border-radius: 1px solid #FFCC1D; */
+    background: #F3950D;
+
+}
+
+.login:hover {
     transform: scale(0.9);
     background: #FFCC1D;
+}
+
+/* Sign up Part */
+
+.createaccount {
+    background-color: rgb(245, 245, 245);
+    padding: 2rem;
+    text-align: center;
+}
+
+.createaccount a {
+    /* width: 100%; */
+    /* background: #86C6F4; */
+
+}
+
+.signup {
+    width: 80%;
+    padding: 1.2rem;
+    background: #86C6F4;
+}
+
+.signup:hover {
+    background: #398AB9;
+}
+
+/* Sign up page */
+
+.signupbtn {
+    background: #2666CF;
+    border-radius: 0;
+    width: 55%;
+
+}
+
+.signupbtn:hover {
+    background: #398AB9;
+}
+
+
+/* Geting details */
+
+p {
+    font-family: 'Quintessential', cursive;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+
+
+.signuptext {
+    /* background: #1572A1; */
+    font-size: 2rem;
+}
+
+.valid {
+    margin-top: 4rem;
+}
+
+
+
+.error_message {
+    color: red;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success_message {
+    color: green;
+    padding-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#you {
+    background: #9AD0EC;
+    padding: .3rem;
 }
